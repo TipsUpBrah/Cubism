@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+.App {
+  text-align: center;
+  font-family: "Roboto";
+  color: #DA4F53;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  overflow: hidden;
+}
+
+.connectButton{
+  position: absolute;
+  top: 10;
+  right:0;
+}
+
+.overlay{
+  opacity:0.85;
+  width:100%;
+  height:100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.moving-background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./assets/1.WebsiteBG_2160x1215_v2.gif");
+}
