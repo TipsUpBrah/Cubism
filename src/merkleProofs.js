@@ -7,7 +7,8 @@ export const generateMerkleProof = (addresses, address) => {
 
   const hashedAddress = keccak256(address);
   const proof = merkleTree.getHexProof(hashedAddress);
-  const root = merkleTree.getHexRoot();                          
+  const root = merkleTree.getHexRoot();
+  console.log(root)                          
 
   const valid = merkleTree.verify(proof, hashedAddress, root);
 
@@ -16,3 +17,5 @@ export const generateMerkleProof = (addresses, address) => {
     proof: proof,
   };
 };
+
+generateMerkleProof()

@@ -31,7 +31,8 @@ const MainMint = ({accounts, setAccounts}) => {
                 const merkleTree = new MerkleTree(leafNodes, keccak256, { sortPairs: true });
                 const hashedAddress = keccak256(accounts[0]);
                 const proof = merkleTree.getHexProof(hashedAddress);
-                const root = merkleTree.getHexRoot(); 
+                const root = merkleTree.getHexRoot();
+                console.log(root);
                 const valid = merkleTree.verify(proof, hashedAddress, root);
                 const response = await contract.cubeMint(proof, { value: ethers.utils.parseUnits("0.1","ether")});
                 console.log('response: ', response);
